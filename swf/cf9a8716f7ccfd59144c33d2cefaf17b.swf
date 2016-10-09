@@ -1,0 +1,133 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=7" />
+<title>爱词霸404页面</title>
+<link href="http://testnews.iciba.com/www/css/learn.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+html,body{overflow:auto;}
+body{ background:url(http://static.www.iciba.com/images/bg_layout.jpg) repeat-x left 30px;}
+.cont_c{width:450px;height:290px;margin:70px auto;text-align:center;position:relative;color:#6bafdd;font-size:12px; background:url(http://static.www.iciba.com/images/404.gif) no-repeat;}
+.cont_c p{ position:absolute;top:155px;left:115px;}
+.cont_c a,.cont_c a:link{color:#ff5000;text-decoration:none;font-weight:700;}
+#search_bar{float:left;padding-left:20px;}
+#timeout{font-weight:700;}
+-->
+</style>
+<script src="http://static.www.iciba.com/scripts/jquery1_4_2.js" charset="utf-8" type="text/javascript" language="javascript"></script>
+<script src="http://static.www.iciba.com/scripts/common.js" charset="utf-8" type="text/javascript" language="javascript"></script>
+<script language="javascript" type="text/javascript" charset="utf-8" src="http://static.www.iciba.com/scripts/init.js"></script>
+<script language="javascript" type="text/javascript" charset="utf-8" src="http://static.www.iciba.com/scripts/dailysentence.js"></script>
+<script language="javascript">
+$(function(){
+	//初始化查词建议
+	ICB.init();
+});
+
+function getFlashObject(movieName)
+{
+	if (window.document[movieName])
+	{
+		return window.document[movieName];
+	}
+	if (navigator.appName.indexOf("Microsoft Internet")==-1)
+	{
+		if (document.embeds && document.embeds[movieName])
+			return document.embeds[movieName];
+	}
+	else // if (navigator.appName.indexOf("Microsoft Internet")!=-1)
+	{
+		return document.getElementById(movieName);
+	}
+}
+
+function asplay(c){
+	var asound = getFlashObject("asound");
+	if(asound){
+		asound.SetVariable("f",c);
+		asound.GotoFrame(1);
+	}
+}
+function asstop(){
+	var asound = getFlashObject("asound");
+	if(asound){
+		asound.GotoFrame(3);
+	}
+}
+</script>
+<script type="text/javascript">
+      <!--
+      var duration=5000;
+      var timer=null;
+      var endTime = new Date().getTime()+duration;
+      function interval()
+      {
+          var n=(endTime-new Date().getTime())/1000;
+		  n=Math.floor(n);
+          if(n<0) return;
+          document.getElementById("timeout").innerHTML = n;
+          setTimeout(interval, 1000);
+      }
+      window.onload=function()
+      {
+          timer=setTimeout("window.location.href='http://www.iciba.com'", duration);
+          interval();
+      }
+      //-->
+</script>
+</head>
+<body>
+<div id="header">
+	<div id="spdc" class="cl">
+		<!--<div class="layout">-->
+        <span class="fl">每日一句:</span>
+        <span class="fl" id="spdbox"><a target="_blank" href="http://bbs.iciba.com/thread-9542132-1-1.html">Once I've done that, it's a piece of cake. 一旦我做到了这一点，接下来的事情就是小菜一碟。</a></span>
+        <span class="fr">
+			<span id="showinfo">
+				<span id="my_nick"><a href="http://uc.iciba.com/?module=user&amp;act=login&amp;returnurl=http%3A%2F%2Fwww.iciba.com%2Fpush%2Fa33b4fe9779d21c45dac0acc90b9169c%2F">登录</a></span>|<span id="my_center"><a href="http://uc.iciba.com/?module=user&amp;act=reg&amp;returnurl=http%3A%2F%2Fwww.iciba.com%2Fpush%2Fa33b4fe9779d21c45dac0acc90b9169c%2F">注册</a></span>|<span id="my_suggest"><a href="http://bbs.iciba.com/forum.php?mod=forumdisplay&fid=43">反馈</a></span>
+            </span>
+      </span>
+        <!--</div>-->
+  </div>
+    <div class="layout" id="leader">
+		<div class="fl"><a title="英语学习" href="http://news.iciba.com/"><img border="0" alt="英语学习" src="http://static.www.iciba.com/images/logo_cd.gif"></a></div>
+        <div class="navText fl">
+        	<a href="http://www.iciba.com/">首页</a>|
+            <a href="http://cd.iciba.com/">词典</a>|
+            <a href="http://fy.iciba.com/">翻译</a>|
+            <a href="http://dj.iciba.com/">句库</a>|
+            <a href="http://news.iciba.com/">英语学习</a>|
+            <a href="http://bbs.iciba.com/">论坛</a>|
+            <a href="http://ciba.iciba.com/">词霸PC客户端</a>|
+            <a href="http://mobile.iciba.com/powerword/">手机客户端</a>|
+            <a href="http://web.iciba.com/ef/daohang/chaci.htm">免费英语</a>
+        </div>
+        <div class="fr" id="search_bar">
+			<!--<div id="pull_down" style="visibility: hidden;"><div id="icibaSugContent"><div style="padding:5px;"><div style="font-size:14px;font-weight:bold;">查词建议</div><div style="margin-top:5px;">提示功能已关闭，请开启后使用。</div></div></div><div id="icibaSugButton"></div><div id="icibaSugBottom"><p><a onclick="ICIBA.Suggest.PowerSwitch(null, true);" href="javascript:;">开启提示功能</a></p></div></div>
+			<div onclick="showFlash('/static/images/swf/blue_paint.swf');" class="handwrite" id="showButton"></div>
+			<a href="javascript:;" onclick="ICIBA.Suggest.PanelToggle(event);" ,="" class="drop_down" id="icibaSubToggle" title="打开/关闭查词建议面板"></a>-->
+            <form action="/index.php" onSubmit="if(this.s.value == ''){top.location.href='http://www.iciba.com/';return false;}else {top.location.href='http://www.iciba.com/'+encodeURIComponent(this.s.value)+'/';return false;}" id="dictF">
+				<div class="fl sb_m">
+					<input type="text" value="" name="s" autocomplete="off" maxlength="2048" id="s" onMouseOver="this.focus()" class="inputSearch fl e">
+                </div>
+                <div>
+					<input type="hidden" disabled="disabled" id="b_tn" value="jinshanciba_1_dg" name="tn">
+                    <input type="hidden" disabled="disabled" id="b_ie" value="utf8" name="ie">
+                    <button onMouseOut="this.className='bottonSearch fl'" onMouseOver="this.className='bottonSearch fl bottonSearch2'" type="submit" class="bottonSearch fl"></button>
+                </div>
+			</form>
+		</div>
+	</div>
+</div>
+<div class="cont">
+	<div class="cont_c">
+    	<p><span id="timeout">5</span>秒钟后自动跳转到首页，<a href="http://www.iciba.com/">立即去首页>></a></p>
+    </div>
+</div>
+<div class="footer">
+<script type="text/javascript" src="http://static.www.iciba.com/scripts/icibafooter.js"></script>
+</div>
+</body>
+</html>
