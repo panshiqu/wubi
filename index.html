@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+<script>
+function onfunction()
+{
+	document.getElementById("div").innerHTML='<img id="img" src="./gif/%x.gif" />';
+	return false;
+}
+</script>
+<body>
+
+<center>
+	<object data="./swf/%x.swf">
+		<embed src="./swf/%x.swf" />
+	</object>
+	<br />
+	<form action="#" onsubmit="return onfunction()">
+		<input id="input" type="text" autofocus>
+	</form>
+	<br /><br />
+	<div id="div">
+	</div>
+</center>
+
+</body>
+</html>
